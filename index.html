@@ -5,39 +5,96 @@
   <title>2D Instance Editing in 3D Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" href="static/images/ARF_VanGogh.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>2D Instance Editing in 3D Space <span class="conf">ICCV 2025</span></h1>
-    <div class="authors" style="text-align:center; line-height:1.7; font-size:1.08em;">
-      <a href="https://github.com/JohannaXie">Yuhuan Xie</a><sup>1*</sup>,
-      <a href="https://github.com/panaoxuan/my-website">Aoxuan Pan</a><sup>1*</sup>,
-      <a href="https://mxllc.github.io/">Ming-Xian Lin</a><sup>2</sup>,
-      <a href="https://aaron-weihuang.com/">Wei Huang</a><sup>2</sup>,
-      <a href="https://yihua7.github.io/website/">Yi-Hua Huang</a><sup>2#</sup>,
-      <a href="https://xjqi.github.io/">Xiaojuan Qi</a><sup>1#</sup>
-      <br>
-      <span class="affiliations" style="font-size:0.97em; color:#666;">
-        <sup>1</sup>The University of Hong Kong,
-        <sup>2</sup>Independent
-      </span>
-      <br>
-      <span style="font-size:0.95em;color:#888;">*Equal Contribution, #Corresponding Author</span>
+    <div class="has-text-centered">
+      <h1 class="title is-1 publication-title">2D Instance Editing in 3D Space</h1>
+      <div class="title is-3"><strong>ICCV Workshop 2025</strong></div>
+      <div class="authors" style="text-align:center; line-height:1.7; font-size:1.08em;">
+        <div class="author-block"><a href="https://github.com/JohannaXie">Yuhuan Xie</a><sup>1*</sup>,</div>
+        <div class="author-block"><a href="https://github.com/panaoxuan/my-website">Aoxuan Pan</a><sup>2*</sup>,</div>
+        <div class="author-block"><a href="https://mxllc.github.io/">Ming-Xian Lin</a><sup>1</sup>,</div>
+        <div class="author-block"><a href="https://aaron-weihuang.com/">Wei Huang</a><sup>1</sup>,</div>
+        <div class="author-block"><a href="https://yihua7.github.io/website/">Yi-Hua Huang</a><sup>1#</sup>,</div>
+        <div class="author-block"><a href="https://xjqi.github.io/">Xiaojuan Qi</a><sup>1#</sup></div>
+        <br>
+        <span class="affiliations" style="font-size:0.97em; color:#666;">
+          <sup>1</sup>The University of Hong Kong,
+          <sup>2</sup>Independent
+        </span>
+        <br>
+        <span style="font-size:0.95em;color:#888;">*Equal Contribution, #Corresponding Author</span>
+      </div>
+      <div class="is-size-5 publication-authors">
+        <sup>1</sup> <a href="https://www.hku.hk/"><img style="width:12%; padding-right: 15px; vertical-align: middle;" src="materials/logo/HKU.png" alt="HKU Logo"></a>
+      </div>
     </div>
-    <div class="links">
-      <a href="paper.pdf">Paper</a>
-      <a href="https://arxiv.org/abs/xxxx.xxxxx">arXiv</a>
-      <a href="video.mp4">Video</a>
-      <a href="https://github.com/your-repo">Code</a>
+    <div class="column has-text-centered">
+      <div class="publication-links">
+        <span class="link-block">
+          <a href="paper.pdf" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>Paper</span>
+          </a>
+        </span>
+        <span class="link-block">
+          <a href="https://arxiv.org/abs/xxxx.xxxxx" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="ai ai-arxiv"></i>
+            </span>
+            <span>arXiv</span>
+          </a>
+        </span>
+        <span class="link-block">
+          <a href="video.mp4" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>Video</span>
+          </a>
+        </span>
+        <span class="link-block">
+          <a href="https://github.com/Panaoxuan/2D-SpaceEdit" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+      </div>
     </div>
-    <h2>Abstract</h2>
-    <p>
-      Generative models have achieved significant progress in advancing 2D image editing, demonstrating exceptional precision and realism. However, they often struggle with consistency and object identity preservation due to their inherent pixel-manipulation nature. To address this limitation, we introduce a novel "2D-3D-2D" framework. Our approach begins by lifting 2D objects into 3D representation, enabling edits within a physically plausible, rigidity-constrained 3D environment. The edited 3D objects are then reprojected and seamlessly inpainted back into the original 2D image. In contrast to existing 2D editing methods, such as DragGAN and DragDiffusion, our method directly manipulates objects in a 3D environment. Extensive experiments highlight that our framework surpasses previous methods in general performance, delivering highly consistent edits while robustly preserving object identity.
-    </p>
+    <!-- Abstract Section -->
+    <section class="section">
+      <div class="container">
+        <div class="content has-text-justified">
+          <h2 class="has-text-centered">Abstract</h2>
+          <p>
+            Generative models have achieved significant progress in advancing 2D image editing, demonstrating exceptional precision and realism. However, they often struggle with consistency and object identity preservation due to their inherent pixel-manipulation nature. To address this limitation, we introduce a novel "2D-3D-2D" framework. Our approach begins by lifting 2D objects into 3D representation, enabling edits within a physically plausible, rigidity-constrained 3D environment. The edited 3D objects are then reprojected and seamlessly inpainted back into the original 2D image. In contrast to existing 2D editing methods, such as DragGAN and DragDiffusion, our method directly manipulates objects in a 3D environment. Extensive experiments highlight that our framework surpasses previous methods in general performance, delivering highly consistent edits while robustly preserving object identity.
+          </p>
+        </div>
+      </div>
+    </section>
     <h2>Demo / Results</h2>
-    <div class="media">
-      <img src="images/result1.png" alt="Result 1">
-      <img src="images/result2.png" alt="Result 2">
+    <div class="media is-flex is-justify-content-center">
+      <img src="materials/images/result1.png" alt="Result 1">
+      <img src="materials/images/result2.png" alt="Result 2">
       <!-- <video src="demo.mp4" controls></video> -->
     </div>
     <h2>BibTeX</h2>

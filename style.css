@@ -1,17 +1,41 @@
-body {
-  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
-  background: #fafbfc;
-  color: #222;
-  margin: 0;
-  padding: 0;
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body, td, th, tr, p, a {
+  font-family: 'Noto Sans', 'Castoro', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', 'Castoro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.authors, .affiliations {
+  font-size: 1.08em;
+  line-height: 1.7;
+}
+
+.author-block {
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+.author-block a {
+  font-weight: 500;
+  font-size: 1.08em;
 }
 .container {
   max-width: 900px;
   margin: 40px auto;
-  background: #fff;
   padding: 32px 40px;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 h1 {
   font-size: 2.2em;
